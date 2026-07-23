@@ -14,3 +14,7 @@
 - `I18N.init({ sources: [a, b] })`로 확장 — 여러 JSON을 fetch 후 Object.assign으로 병합(뒤가 우선). 방 페이지는 `['../../shared/common', '.']` 순서로 로드. 기존 basePath 옵션도 호환 유지(랜딩에서 사용 중).
 - 콘텐츠 분리 기준 — 분리수거·이용 규칙·비상연락처는 shared/common에, 와이파이·출입·가전·주변·교통·FAQ·체크아웃은 방 JSON에. 호스트 카카오톡 ID는 전 방 공통이라 common에 둠.
 - 인덕션 버튼 설명표는 표 대신 핵심 불릿(전원 1.5초, 20초 자동꺼짐, 타이머 1~60분, 차일드락 3초, H 잔열 표시)으로 정리.
+
+## 2026-07-23 — QR 코드 · 인쇄 안내판
+- `g/v4qfqfbq/qr.png`(588px) / `qr.svg` — 방 페이지 URL 인코딩, 오류 정정 H, OpenCV로 디코드 검증.
+- `g/v4qfqfbq/print.html` — A5 인쇄 안내판. 세 언어를 한 장에 동시 표기해야 해서 토글 i18n을 쓰지 않고 문구를 HTML에 직접 넣음("번역 JSON 분리" 규칙의 예외, 인쇄물 한정). 새 방 추가 시 QR 생성과 print.html 복제는 generator 스크립트에 포함할 것.
