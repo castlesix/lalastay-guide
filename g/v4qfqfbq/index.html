@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!-- 라라스테이 방별 게스트 가이드 페이지 (공통 콘텐츠 + 방별 JSON 병합 렌더링) -->
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title data-i18n="guide.title">Lala Stay</title>
+  <link rel="stylesheet" href="../../shared/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="brand">Lala Stay</h1>
+    <nav class="lang-toggle" aria-label="언어 선택 / Language">
+      <button type="button" data-lang="ko" aria-pressed="false">한국어</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <p data-i18n="guide.intro1"></p>
+      <p data-i18n="guide.intro2"></p>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="wifi.title"></h2>
+      <ul>
+        <li data-i18n="wifi.ssid"></li>
+        <li data-i18n="wifi.password"></li>
+        <li data-i18n="wifi.qr"></li>
+        <li data-i18n="wifi.trouble"></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="entry.title"></h2>
+      <h3 data-i18n="entry.door.title"></h3>
+      <ul>
+        <li data-i18n="entry.door.code"></li>
+        <li data-i18n="entry.door.change"></li>
+        <li data-i18n="entry.door.autolock"></li>
+        <li data-i18n="entry.door.battery"></li>
+        <li data-i18n="entry.door.restore"></li>
+      </ul>
+      <h3 data-i18n="entry.time.title"></h3>
+      <ul>
+        <li data-i18n="entry.time.checkin"></li>
+        <li data-i18n="entry.time.checkout"></li>
+        <li data-i18n="entry.time.adjust"></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="home.title"></h2>
+      <h3 data-i18n="boiler.title"></h3>
+      <ul>
+        <li data-i18n="boiler.loc"></li>
+        <li data-i18n="boiler.left"></li>
+        <li data-i18n="boiler.right"></li>
+        <li data-i18n="boiler.ondol"></li>
+        <li data-i18n="boiler.away"></li>
+      </ul>
+      <h3 data-i18n="ac.title"></h3>
+      <ul>
+        <li data-i18n="ac.body"></li>
+      </ul>
+      <h3 data-i18n="cooktop.title"></h3>
+      <ul>
+        <li data-i18n="cooktop.intro"></li>
+        <li data-i18n="cooktop.quick"></li>
+        <li data-i18n="cooktop.power"></li>
+        <li data-i18n="cooktop.temp"></li>
+        <li data-i18n="cooktop.timer"></li>
+        <li data-i18n="cooktop.lock"></li>
+        <li data-i18n="cooktop.h"></li>
+        <li data-i18n="cooktop.off"></li>
+        <li data-i18n="cooktop.pan"></li>
+      </ul>
+      <h3 data-i18n="washer.title"></h3>
+      <ul>
+        <li data-i18n="washer.loc"></li>
+        <li data-i18n="washer.cycle"></li>
+      </ul>
+      <h3 data-i18n="tv.title"></h3>
+      <ul>
+        <li data-i18n="tv.power"></li>
+        <li data-i18n="tv.account"></li>
+      </ul>
+      <h3 data-i18n="etc.title"></h3>
+      <ul>
+        <li data-i18n="etc.dryer"></li>
+        <li data-i18n="etc.towel"></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="trash.title"></h2>
+      <p class="notice" data-i18n="trash.warn"></p>
+      <ul>
+        <li data-i18n="trash.general"></li>
+        <li data-i18n="trash.food"></li>
+        <li data-i18n="trash.recycle"></li>
+        <li data-i18n="trash.days"></li>
+        <li data-i18n="trash.bags"></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="rules.title"></h2>
+      <ul>
+        <li data-i18n="rules.smoking"></li>
+        <li data-i18n="rules.noise"></li>
+        <li data-i18n="rules.pets"></li>
+        <li data-i18n="rules.visitors"></li>
+        <li data-i18n="rules.hallway"></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="nearby.title"></h2>
+      <ul>
+        <li data-i18n="nearby.conv"></li>
+        <li data-i18n="nearby.mart"></li>
+        <li data-i18n="nearby.pharmacy"></li>
+        <li data-i18n="nearby.hospital"></li>
+        <li data-i18n="nearby.atm"></li>
+        <li data-i18n="nearby.medical"></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="transport.title"></h2>
+      <ul>
+        <li data-i18n="transport.subway"></li>
+        <li data-i18n="transport.bus"></li>
+        <li data-i18n="transport.airport"></li>
+        <li data-i18n="transport.taxi"></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="emergency.title"></h2>
+      <h3 data-i18n="emergency.host.title"></h3>
+      <ul>
+        <li data-i18n="emergency.host.messenger"></li>
+        <li data-i18n="emergency.host.kakao"></li>
+      </ul>
+      <h3 data-i18n="emergency.numbers.title"></h3>
+      <ul>
+        <li data-i18n="emergency.119"></li>
+        <li data-i18n="emergency.112"></li>
+        <li data-i18n="emergency.1330"></li>
+        <li data-i18n="emergency.120"></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="faq.title"></h2>
+      <dl class="faq">
+        <dt data-i18n="faq.q1"></dt>
+        <dd data-i18n="faq.a1"></dd>
+        <dt data-i18n="faq.q2"></dt>
+        <dd data-i18n="faq.a2"></dd>
+        <dt data-i18n="faq.q3"></dt>
+        <dd data-i18n="faq.a3"></dd>
+        <dt data-i18n="faq.q4"></dt>
+        <dd data-i18n="faq.a4"></dd>
+      </dl>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="leaving.title"></h2>
+      <p data-i18n="leaving.intro"></p>
+      <ul class="checklist">
+        <li data-i18n="leaving.item1"></li>
+        <li data-i18n="leaving.item2"></li>
+        <li data-i18n="leaving.item3"></li>
+        <li data-i18n="leaving.item4"></li>
+        <li data-i18n="leaving.item5"></li>
+      </ul>
+      <p class="notice" data-i18n="leaving.thanks"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Lala Stay · 라라스테이</p>
+  </footer>
+
+  <script src="../../shared/i18n.js"></script>
+  <script>
+    I18N.init({ sources: ['../../shared/common', '.'] });
+  </script>
+</body>
+</html>

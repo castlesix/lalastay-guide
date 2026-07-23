@@ -2,7 +2,7 @@
 const I18N = (function () {
   const LANGS = ['ko', 'en', 'zh'];
   const STORAGE_KEY = 'lalastay-lang';
-  let basePath = '.';
+  let sources = ['.'];
 
   function detectLang() {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -28,16 +28,18 @@ const I18N = (function () {
 
   async function setLang(lang) {
     if (!LANGS.includes(lang)) return;
-    const res = await fetch(basePath + '/' + lang + '.json');
-    if (!res.ok) return;
-    applyDict(await res.json());
+    const dicts = await Promise.all(sources.map(async function (base) {
+      const res = await fetch(base + '/' + lang + '.json');
+      return res.ok ? res.json() : {};
+    }));
+    applyDict(Object.assign.apply(null, [{}].concat(dicts)));
     document.documentElement.lang = lang;
     localStorage.setItem(STORAGE_KEY, lang);
     markActive(lang);
   }
 
   function init(opts) {
-    basePath = (opts && opts.basePath) || '.';
+    sources = (opts && (opts.sources || (opts.basePath && [opts.basePath]))) || ['.'];
     document.querySelectorAll('.lang-toggle [data-lang]').forEach(function (btn) {
       btn.addEventListener('click', function () {
         setLang(btn.getAttribute('data-lang'));

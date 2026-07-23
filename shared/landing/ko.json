@@ -1,10 +1,10 @@
 {
   "landing.title": "라라스테이",
   "landing.welcome.title": "환영합니다",
-  "landing.welcome.body": "라라스테이에 오신 것을 환영합니다. (플레이스홀더)",
+  "landing.welcome.body": "라라스테이에 오신 것을 환영합니다. 머무시는 동안 편안하시길 바랍니다.",
   "landing.howto.title": "이용 안내",
-  "landing.howto.body": "객실에 비치된 QR 코드를 스캔하면 방별 안내 페이지로 이동합니다. (플레이스홀더)",
+  "landing.howto.body": "객실에 비치된 QR 코드를 스캔하면 머무시는 방의 안내 페이지로 이동합니다.",
   "landing.contact.title": "문의",
-  "landing.contact.body": "문의 관련 안내가 들어갈 자리입니다. (플레이스홀더)",
+  "landing.contact.body": "궁금한 점은 예약하신 플랫폼 메신저로 연락 주세요. 긴급 시 119(응급/화재), 112(경찰), 1330(관광통역안내, 24시간 다국어)으로 전화할 수 있습니다.",
   "landing.footer": "Lala Stay · 라라스테이"
 }
