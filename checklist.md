@@ -17,4 +17,4 @@
 
 ## 다음 작업 (미착수)
 - [ ] generator/ 방 추가 스크립트
-- [ ] QR 코드 생성 (방 페이지 URL)
+- [x] QR 코드 생성 (방 페이지 URL) — g/v4qfqfbq/qr.png, qr.svg
