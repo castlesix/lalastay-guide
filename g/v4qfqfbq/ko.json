@@ -15,7 +15,7 @@
   "entry.door.battery": "배터리 부족 경고음이 울리면 호스트에게 알려주세요.",
   "entry.door.restore": "퇴실 시 처음 안내받은 비밀번호로 되돌려주세요.",
   "entry.time.title": "체크인 / 체크아웃",
-  "entry.time.checkin": "체크인 — 14:00",
+  "entry.time.checkin": "체크인 — 15:00",
   "entry.time.checkout": "체크아웃 — 11:00",
   "entry.time.adjust": "입실/퇴실 시간 조정이 필요하면 미리 메시지 주세요.",
   "home.title": "🛋 집 안내",
