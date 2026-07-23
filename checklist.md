@@ -18,3 +18,12 @@
 ## 다음 작업 (미착수)
 - [x] generator/ 방 추가 스크립트 — new_room.py (슬러그+JSON 복사+QR+안내판 일괄 생성)
 - [x] QR 코드 생성 (방 페이지 URL) — g/v4qfqfbq/qr.png, qr.svg
+
+## 배포 · 부가 작업 (2026-07-23)
+- [x] GitHub Pages 배포 — https://castlesix.github.io/lalastay-guide/ (main 푸시 시 자동)
+- [x] 체크인 시간 15:00으로 변경 (3개 언어)
+- [x] 인쇄 안내판 g/v4qfqfbq/print.html (A5, 3개 언어, 하단 URL 링크)
+- [x] CLAUDE.md 등 문서 현행화
+
+## 다음 작업 (미착수)
+- [ ] 방 추가 시 generator/new_room.py 실행 후 방별 JSON 수정

@@ -17,4 +17,11 @@
 
 ## 2026-07-23 — QR 코드 · 인쇄 안내판
 - `g/v4qfqfbq/qr.png`(588px) / `qr.svg` — 방 페이지 URL 인코딩, 오류 정정 H, OpenCV로 디코드 검증.
-- `g/v4qfqfbq/print.html` — A5 인쇄 안내판. 세 언어를 한 장에 동시 표기해야 해서 토글 i18n을 쓰지 않고 문구를 HTML에 직접 넣음("번역 JSON 분리" 규칙의 예외, 인쇄물 한정). 새 방 추가 시 QR 생성과 print.html 복제는 generator 스크립트에 포함할 것.
+- `g/v4qfqfbq/print.html` — A5 인쇄 안내판. 세 언어를 한 장에 동시 표기해야 해서 토글 i18n을 쓰지 않고 문구를 HTML에 직접 넣음("번역 JSON 분리" 규칙의 예외, 인쇄물 한정). 하단 URL 텍스트는 방 페이지로 링크됨.
+
+## 2026-07-23 — 배포 · generator
+- GitHub Pages 배포 완료 — 저장소 https://github.com/castlesix/lalastay-guide (공개), main 브랜치 루트에서 서빙, 푸시 후 1~2분 내 자동 반영. 배포 URL은 https://castlesix.github.io/lalastay-guide/
+- 공개 저장소라 와이파이 비밀번호는 저장소에서 조회 가능함(사용자 인지 상태). 도어락 비밀번호는 미포함, 원본 PDF(doc/)는 .gitignore 처리.
+- `generator/new_room.py` — 새 방 일괄 생성. 기존 방(기본 v4qfqfbq)을 템플릿으로 index.html·JSON 복사, secrets로 8자리 슬러그 생성(중복 검사), QR png/svg 생성, print.html의 슬러그를 정규식으로 치환. BASE_URL은 스크립트 상수(--base-url로 재정의 가능). qrcode 패키지 필요.
+- Windows 콘솔 한글 깨짐 방지를 위해 스크립트에서 stdout을 UTF-8로 reconfigure.
+- 체크인 시간 14:00 → 15:00 변경됨(사용자 직접 수정, 3개 언어 반영).
