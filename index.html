@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- 라라스테이 랜딩 페이지 (방 링크 없음, 브랜드 소개와 이용 안내만) -->
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="landing.title">Lala Stay</title>
+  <link rel="stylesheet" href="shared/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="brand">Lala Stay</h1>
+    <nav class="lang-toggle" aria-label="언어 선택 / Language">
+      <button type="button" data-lang="ko" aria-pressed="false">한국어</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2 data-i18n="landing.welcome.title"></h2>
+      <p data-i18n="landing.welcome.body"></p>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="landing.howto.title"></h2>
+      <p data-i18n="landing.howto.body"></p>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="landing.contact.title"></h2>
+      <p data-i18n="landing.contact.body"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p data-i18n="landing.footer"></p>
+  </footer>
+
+  <script src="shared/i18n.js"></script>
+  <script>
+    I18N.init({ basePath: 'shared/landing' });
+  </script>
+</body>
+</html>
