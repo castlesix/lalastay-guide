@@ -16,5 +16,5 @@
 - [x] 검증 — JSON 파싱, 키 커버리지(98개), 리소스 200
 
 ## 다음 작업 (미착수)
-- [ ] generator/ 방 추가 스크립트
+- [x] generator/ 방 추가 스크립트 — new_room.py (슬러그+JSON 복사+QR+안내판 일괄 생성)
 - [x] QR 코드 생성 (방 페이지 URL) — g/v4qfqfbq/qr.png, qr.svg
